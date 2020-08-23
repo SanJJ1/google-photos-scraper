@@ -2,3 +2,6 @@ __pycache__/*
 geckodriver.exe
 geckodriver.log
 keys.txt
+data.bak
+data.dat
+data.dir
