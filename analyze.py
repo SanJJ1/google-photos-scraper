@@ -3,31 +3,9 @@ import shelve
 with shelve.open('data') as db:
     links = db['links']
 
-sum = 0
-anoms = []
-# for i in links[-100:]:
-#     print(i[1].split('\n'), i[0])
-for i in links:
-    s = False
-    for j in i[1].split("\n"):
-        if 'MB' in j or 'KB' in j or 'GB' in j:
-            s = True
-            x = j.split()
-            try:
-                if x[1] == 'KB':
-                    sum += float(x[0])
-                elif x[1] == 'MB':
-                    sum += 1000 * float(x[0])
-                elif x[1] == 'GB':
-                    input(f'{x[0]} GB detected at {i}')
-                else:
-                    input(f'None detected at {i}')
-            except:
-                anoms.append(i)
-    if not s:
-        input(f'none detected at {i}')
 
-        # else:
-            #     input(f'None Detected at {i}')
+print(links)
 
-print(sum)
+
+# https://lh3.googleusercontent.com/AsjryIZn8GYuCzylNT1TNJHvwP6wc4RC2dQj2Hna6DvlLYdQptl0XrV5TtJD01q_JR2xi1-Mc-_VZI66vvAdAXMmql_3trqCOfnXsnNApGB3ZAOuxzkjB_FNt0mKOcBY6lzw9ahLPck68Hap36G_isB4bQQcDLFN8UKGcdlAdVIhGXXzlw0A5t0yoCQacHMxzhPEOket-uZ5yIyFOUTd_ZhZz3jlEq7TQKzHsoZzLZElIJUERKvsDrj0c30RgdYtk-ReSOXlX6lkZIY0bAw1lU38wfaEfy1vdKWBrML3eNHhnL4lcCPdhUemjTrA0UlVyMcu1hAzsGztdBaWx7qESKiT_g0efI79XRijpGJ1ksviVUEZqNQJOxn0ToOoeKnncZnXFkr-8v62S-M3-mfAgRVJRnQW36eo1cP8Owp249n0cp-wsUFJw-VZyyduSWJLF_TkCf7hWkDFq04IY_AU6Ale3Tju2yWJmzkYjp6Vg0YQdAFoJM1T904_STzZwznsyazComAihCFbR8QQrc6iGLTvdhsQnhOkhuBdUCnDT7Q5aFFgD4ke5DpfrsxEBl6rOMAK_evBgSiZmc7WJNZEzomY9sbJvAVuidFWFkwLw-zhS0tnhKOtOQkacpr5FPUVLVTaisD0fQKJfNTcrFg-MXCIv-lBGOLEf_JtqKFMA1oUMeODjg6JE-n588ObBu4=w693-h924-no?authuser=0
+# https://photos.google.com/photo/AF1QipO1IOvdARrBe1De0vj0PGfhaanRiTnBLvUVUXid
