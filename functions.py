@@ -1,5 +1,4 @@
-import time
-
+from time import sleep
 
 def wait_until_load(element_wait_for_load):
     def link_has_gone_stale():
@@ -12,7 +11,7 @@ def wait_until_load(element_wait_for_load):
             return True
 
     while link_has_gone_stale():
-        time.sleep(.1)
+        sleep(.1)
         print('t')
         pass
 
